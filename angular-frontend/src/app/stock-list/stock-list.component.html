@@ -1,0 +1,26 @@
+<h2> Stocks List</h2>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<div class="search-hero">
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Start searching for stock">
+</div>
+<div ng-app="myApp" ng-controller="namesCtrl">
+<table class = "table table-striped" >
+    <thead>
+        <tr>
+            <!-- <th> Stock name:</th> -->
+            <!-- <th> {{ stock }} </th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let stock of stocks | filter:searchText">
+            <th> Stock name:</th>
+            <th> {{ stock }} </th>
+            <td>
+                <button (click) = "stockDetails(stock)" class = "btn btn-info" style="margin-left: 10px"> View order details</button>
+            </td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+
+<button type="button" (click)="goBack()">Go back</button>

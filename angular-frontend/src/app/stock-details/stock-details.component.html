@@ -1,0 +1,20 @@
+<h3> View Order details for {{stocks[0].stockTicker}}</h3>
+<div *ngFor = "let stock of stocks">
+    <div>
+        <label> <b> Stock name: </b></label> {{ stock.stockTicker }}
+    </div>
+    <div>
+        <label> <b> Price: </b></label> {{ stock.price }}
+    </div>
+    <div>
+        <label> <b> No of shares: </b></label> {{stock.volume }}
+    </div>
+    <div>
+        <label> <b> Action: </b></label> {{stock.buyOrSell }}
+    </div>
+    <div>
+        <label> <b> Status code: </b></label> {{stock.statusCode }}
+    </div>
+</div>
+
+<button type="button" (click)="goBack()">Go back</button>

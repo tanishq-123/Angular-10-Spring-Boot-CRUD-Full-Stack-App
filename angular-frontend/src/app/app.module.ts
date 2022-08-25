@@ -3,25 +3,25 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmployeeListComponent } from './employee-list/employee-list.component';
-import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { StockListComponent } from './stock-list/stock-list.component';
+import { CreateStockComponent } from './create-stock/create-stock.component';
 import { FormsModule} from '@angular/forms';
-import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
-import { EmployeeDetailsComponent } from './employee-details/employee-details.component'
+import { StockDetailsComponent } from './stock-details/stock-details.component'
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmployeeListComponent,
-    CreateEmployeeComponent,
-    UpdateEmployeeComponent,
-    EmployeeDetailsComponent
+    StockListComponent,
+    CreateStockComponent,
+    StockDetailsComponent
   ],
   imports: [
+    Ng2SearchPipeModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

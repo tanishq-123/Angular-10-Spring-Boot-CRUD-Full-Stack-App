@@ -1,0 +1,32 @@
+<div class="col-md-6 offset-md-3">
+    <h3> Create Employee </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Stock Name:</label>
+            <input type="text" class ="form-control" id = "firstname"
+                [(ngModel)] = "stock.stockTicker" name = "firstName">
+        </div>
+    
+        <div class="form-group">
+            <label> Price:</label>
+            <input type="text" class ="form-control" id = "lastName"
+                [(ngModel)] = "stock.price" name = "lastName">
+        </div>
+    
+        <div class="form-group">
+            <label> Volume:</label>
+            <input type="text" class ="form-control" id = "emailId"
+                [(ngModel)] = "stock.volume" name = "emailId">
+        </div>
+
+        <div class="form-group">
+            <label> Action:</label>
+            <input type="text" class ="form-control" id = "emailId"
+                [(ngModel)] = "stock.buyOrSell" name = "emailId">
+        </div>
+
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+    </div> 
